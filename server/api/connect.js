@@ -1,8 +1,5 @@
 import { MongoClient } from "mongodb";
 
-const URI =
-  "mongodb+srv://damassa:91799449d@cluster0.3lyhc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
-const client = new MongoClient(URI);
+const client = new MongoClient(`${import.meta.env.URI}`);
 
 export const db = client.db("spotifree");
